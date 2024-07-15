@@ -1,19 +1,28 @@
+// Function to add two numbers
 function add(number1, number2) {
     return number1 + number2;
 }
 
+// Function to subtract two numbers
 function subtract(number1, number2) {
     return number1 - number2;
 }
 
+// Function to multiply two numbers
 function multiply(number1, number2) {
     return number1 * number2;
 }
 
+// Function to divide two numbers
 function divide(number1, number2) {
+    // Check if dividing by zero
+    if (number2 === 0) {
+        return "Error: Division by zero";
+    }
     return number1 / number2;
 }
 
+// Event listener for addition button
 document.getElementById('add').addEventListener('click', function() {
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
@@ -21,6 +30,7 @@ document.getElementById('add').addEventListener('click', function() {
     document.getElementById('calculation-result').textContent = result;
 });
 
+// Event listener for subtraction button
 document.getElementById('subtract').addEventListener('click', function() {
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
@@ -28,6 +38,7 @@ document.getElementById('subtract').addEventListener('click', function() {
     document.getElementById('calculation-result').textContent = result;
 });
 
+// Event listener for multiplication button
 document.getElementById('multiply').addEventListener('click', function() {
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
@@ -35,6 +46,7 @@ document.getElementById('multiply').addEventListener('click', function() {
     document.getElementById('calculation-result').textContent = result;
 });
 
+// Event listener for division button
 document.getElementById('divide').addEventListener('click', function() {
     const number1 = parseFloat(document.getElementById('number1').value) || 0;
     const number2 = parseFloat(document.getElementById('number2').value) || 0;
